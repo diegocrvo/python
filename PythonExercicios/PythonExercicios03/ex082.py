@@ -10,7 +10,9 @@ while True:
     value = int(input('Digite um número: '))
     list.append(value)
     comand = str(input('Deseja continuar?[S/N]: '))
-    if value % 2 == 0:
+    if value == 0:
+        value = ''
+    elif value % 2 == 0:
         listpar.append(value)
     else:
         listimpar.append(value)
@@ -18,4 +20,4 @@ while True:
         break
 print(f'Os valores digitados foram {list}')
 print(f'Os valores pares digitados foram {listpar}')
-print(f'Os valores ìmpares digitados fooram {listimpar}')
+print(f'Os valores ìmpares digitados foram {listimpar}')
