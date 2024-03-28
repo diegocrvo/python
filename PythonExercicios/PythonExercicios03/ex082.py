@@ -4,20 +4,21 @@ respectivamente.
 Ao final, mostre o conteúdo das três listas geradas."""
 
 list = []
-listpar = []
-listimpar = []
+even = []
+odd = []
 while True:
-    value = int(input('Digite um número: '))
+    value = int(input('Enter a value: '))
     list.append(value)
-    comand = str(input('Deseja continuar?[S/N]: '))
     if value == 0:
         value = ''
     elif value % 2 == 0:
-        listpar.append(value)
+        even.append(value)
     else:
-        listimpar.append(value)
-    if comand in 'Nn':
+        odd.append(value)
+    answer = str(input('Do you want to continue?[Y/N]: '))
+    if answer in 'Nn':
         break
-print(f'Os valores digitados foram {list}')
-print(f'Os valores pares digitados foram {listpar}')
-print(f'Os valores ìmpares digitados foram {listimpar}')
+print('-' * 40)
+print(f'The values entered were {list}')
+print(f'The entered even values were {even}')
+print(f'The entered odd values were {odd}')
